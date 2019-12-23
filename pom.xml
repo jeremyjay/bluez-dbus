@@ -124,6 +124,12 @@
             <version>1.7.25</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.hypfvieh</groupId>
+            <artifactId>java-utils</artifactId>
+            <version>1.0.5</version>
+        </dependency>
     </dependencies>
 
     <scm>

@@ -328,6 +328,10 @@ public class DeviceManager {
      * @return list - maybe empty
      */
     public List<BluetoothDevice> getDevices(String _adapterMac, boolean _doNotScan) {
+        if(!bluetoothDeviceByAdapterMac.isEmpty())
+        {
+            bluetoothDeviceByAdapterMac.get(getAdapter(_adapterMac).getAddress()).clear(); // Clear out all old devices
+        }
         if (_doNotScan) {
             findBtDevicesByIntrospection(getAdapter(_adapterMac));
         } else {
